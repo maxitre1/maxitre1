@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canlı Maç Merkezi</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__badge">CANLI</div>
+    <div>
+      <p class="eyebrow">Anlık skor, yayın ve maç programı</p>
+      <h1>Maç Yayın Merkezi</h1>
+      <p class="lede">Tüm karşılaşmaları tek ekranda takip edin: canlı yayın, skor tablosu ve yaklaşan maçlar.</p>
+      <div class="cta">
+        <a class="button primary" href="#live">Şimdi İzle</a>
+        <a class="button ghost" href="#schedule">Maç Programı</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="grid">
+    <section id="live" class="card live">
+      <div class="live__header">
+        <div>
+          <p class="eyebrow">Canlı Yayın</p>
+          <h2 class="section-title">Haftanın Derbisi</h2>
+          <p class="lede">Takipçilerimizin en çok beklediği karşılaşma burada.</p>
+        </div>
+        <div class="clock" aria-live="polite"></div>
+      </div>
+      <div class="stream">
+        <div class="overlay">Yayın hazır — başlatmak için oynatın</div>
+        <iframe src="https://www.youtube.com/embed/5qap5aO4i9A" title="Canlı yayın" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="score">
+        <div class="team">
+          <span class="team__name" id="home-name">FC Kuzey</span>
+          <span class="team__score" id="home-score">0</span>
+        </div>
+        <div class="status" id="match-status">1. Devre · 12:34</div>
+        <div class="team">
+          <span class="team__name" id="away-name">Güneyspor</span>
+          <span class="team__score" id="away-score">0</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="schedule" class="card schedule">
+      <div class="schedule__header">
+        <div>
+          <p class="eyebrow">Program</p>
+          <h2 class="section-title">Yaklaşan Maçlar</h2>
+        </div>
+        <div class="filter">
+          <label for="league-select">Lig</label>
+          <select id="league-select"></select>
+        </div>
+      </div>
+      <ul id="schedule-list" class="schedule__list"></ul>
+    </section>
+
+    <section class="card info">
+      <p class="eyebrow">Öne Çıkanlar</p>
+      <h2 class="section-title">Saha Kenarından Notlar</h2>
+      <ul class="info__list">
+        <li>
+          <h3>Stadyum Atmosferi</h3>
+          <p>Yayın sırasında taraftar sesleriyle gerçek maç heyecanını yakalayın.</p>
+        </li>
+        <li>
+          <h3>Takip Kolaylığı</h3>
+          <p>Canlı skor güncellemeleri, kart ve gol bilgileri otomatik yenilenir.</p>
+        </li>
+        <li>
+          <h3>Çoklu Lig Desteği</h3>
+          <p>Avrupa liglerinden yerel derbilere kadar tüm maçları tek panelde görün.</p>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Yayın akışı, maç programı ve skor takibi için tek adres.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
